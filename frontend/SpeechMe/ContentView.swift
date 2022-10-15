@@ -1,5 +1,5 @@
 //
-//  ContentView.swift/Users/harukamasamura/Desktop/cs/SpeechMe/SpeechMe/ContentView.swift
+//  ContentView.swift
 //  SpeechMe
 //
 //  Created by Haruka Masamura on 10/14/22.
