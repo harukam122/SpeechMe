@@ -1,3 +1,4 @@
+import argparse
 import os
 import utils
 from find_similarities import find_similarities
