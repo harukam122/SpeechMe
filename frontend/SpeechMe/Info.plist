@@ -12,12 +12,13 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>www.randomnumberapi.com</key>
-			<dict/>
-			<key>NSExceptionAllowInsecureHTTPLoads</key>
-			<true/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
+			<key>randomnumberapi.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>UIAppFonts</key>

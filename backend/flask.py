@@ -10,8 +10,6 @@ app = Flask(__name__)
 def text():
     text = request.text["text"]
 
-
-
 @app.route('/audio', methods=['POST'])
 def audio():
     audio_file = request.files["file"]

@@ -22,7 +22,7 @@ struct SpeechMeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            InputView()
+            ContentView()
         }
     }
     

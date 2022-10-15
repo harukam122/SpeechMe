@@ -42,7 +42,7 @@ struct Record : View {
                     
                     do{
                         
-                        if self.record{
+                        if self.record {
                             
                             // Already Started Recording means stopping and saving...
                             
@@ -162,7 +162,34 @@ struct Record : View {
         }
     }
     
+    func sendAudio(fileName: String) throws {
+        let fileLocation = Bundle.main.path(forResource: fileName, ofType: "m4a")
+        guard let fileLocation = fileLocation else {
+            return //TODO: handle
+        }
+        let fileURL = URL(fileURLWithPath: fileLocation)
+        let fileData = try Data(contentsOf: fileURL, options: .dataReadingMapped)
+        let base64String = fileData.base64EncodedString()
+        print(base64String)
+    }
+    
 }
+
+//func apiCall() {
+//    guard let url = URL(string: "") else {
+//        return
+//    }
+//
+//    var request = URLRequest(url: url)
+//    // method, body, headers
+//    request.httpMethod = "POST"
+//    request.setValue("", forHTTPHeaderField: "")
+//    let body: [String: AnyHashable] = [
+//    ]
+//    request.httpBody = nil
+//
+//    // make the request
+//}
 
 struct RecordView: View {
     var body: some View {

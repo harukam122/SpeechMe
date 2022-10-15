@@ -24,16 +24,48 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B4DB0039-63AB-42D7-930B-9FF1A049DF41"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpeechMe/ResultView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "loadResult()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B4DB0039-63AB-42D7-930B-9FF1A049DF41 - eb7d39026eb14107"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpeechMe.ResultView.loadResult() async -&gt; ()"
+                  moduleName = "SpeechMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harukamasamura/Desktop/cs/SpeechMe/frontend/SpeechMe/ResultView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "821">
+               </Location>
+               <Location
+                  uuid = "B4DB0039-63AB-42D7-930B-9FF1A049DF41 - abcf373a5a739eae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for SpeechMe.ResultView.loadResult() async -&gt; ()"
+                  moduleName = "SpeechMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harukamasamura/Desktop/cs/SpeechMe/frontend/SpeechMe/ResultView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "871">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
