@@ -5,7 +5,7 @@ import json
 import re
 import string
 
-def GetScore(start_word, audio_file_link, api_key):
+def GetScore(start_word, filepath, api_key):
 
     # Create header with authorization along with content-type
     header = {
@@ -13,7 +13,8 @@ def GetScore(start_word, audio_file_link, api_key):
         'content-type': 'application/json'
     }
 
-    upload_url = {'upload_url': audio_file_link}
+    # Uploading to AssemblyAI
+    upload_url = utils.upload_file(filepath, header)
 
     # Request a transcription
     transcript_response = utils.request_transcript(upload_url, header)
