@@ -1,6 +1,8 @@
 from math import floor
 
 def find_similarities(start_word, end_word):
+    start_word = start_word.lower()
+    end_word = end_word.lower()
     if (start_word == end_word):
         return 1
 

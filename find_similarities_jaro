@@ -1,6 +1,8 @@
 from math import floor
 
 def find_similarities(start_word, end_word):
+    start_word = start_word.lower()
+    end_word = end_word.lower()
     if (start_word == end_word):
         return 1
  
@@ -36,7 +38,6 @@ def find_similarities(start_word, end_word):
             pointer += 1
     t = t//2
  
-    # Return the Jaro Similarity
     return ((matches/len1)+(matches/len2)+((matches-t)/matches))/3
 
-print(jaro_distance("CRATE", "TRACE"))
+print(find_similarities("dogs", "Dog"))
