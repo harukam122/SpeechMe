@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721331E128FB39EB002F9457 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721331DE28FB39EB002F9457 /* SceneDelegate.swift */; };
 		D30D96A128FA4EE500D1BC05 /* SpeechMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96A028FA4EE500D1BC05 /* SpeechMeApp.swift */; };
 		D30D96A328FA4EE500D1BC05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96A228FA4EE500D1BC05 /* ContentView.swift */; };
 		D30D96A528FA4EE700D1BC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30D96A428FA4EE700D1BC05 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		721331DE28FB39EB002F9457 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D30D969D28FA4EE400D1BC05 /* SpeechMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30D96A028FA4EE500D1BC05 /* SpeechMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMeApp.swift; sourceTree = "<group>"; };
 		D30D96A228FA4EE500D1BC05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				D30D96D228FAFACD00D1BC05 /* InputView.swift */,
 				D30D96D428FAFBAF00D1BC05 /* RecordView.swift */,
 				D30D96D628FB04A300D1BC05 /* ResultView.swift */,
+				721331DE28FB39EB002F9457 /* SceneDelegate.swift */,
 				D30D96A428FA4EE700D1BC05 /* Assets.xcassets */,
 				D30D96A628FA4EE700D1BC05 /* Preview Content */,
 			);
@@ -289,6 +292,7 @@
 				D30D96D728FB04A300D1BC05 /* ResultView.swift in Sources */,
 				D30D96A328FA4EE500D1BC05 /* ContentView.swift in Sources */,
 				D30D96A128FA4EE500D1BC05 /* SpeechMeApp.swift in Sources */,
+				721331E128FB39EB002F9457 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

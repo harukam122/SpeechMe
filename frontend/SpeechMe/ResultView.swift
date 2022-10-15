@@ -24,17 +24,21 @@ struct ResultView: View {
         
         // view code
         NavigationView {
-            List(results, id: \.trackId) { item in
-                VStack(alignment: .leading) {
-                    Text(item.trackName)
-                        .font(.headline)
-                    Text(item.collectionName)
-                }
+            ZStack {
+                RoundedRectangle(cornerRadius: 30)
+                    .foregroundColor(Color.white)
+                Text("97")
+                    .foregroundColor(Color.accentColor)
+                    .font(.custom("KumbhSans-SemiBold", size: 120))
+//                List(results, id: \.trackId) { item in
+//                    VStack(alignment: .leading) {
+//                        Text(item.trackName)
+//                            .font(.headline)
+//                        Text(item.collectionName)
+//                    }
+//                }
             }
-            
-//            VStack(alignment: .center) {
-//                Text()
-//            }
+            .background(Color.accentColor)
             .task {
                 await loadResult()
             }
