@@ -22,13 +22,6 @@ struct Record : View {
     var body: some View{
         
         NavigationView{
-            ZStack {
-                Color(red: 0.3216, green: 0.3247, blue: 0.87).opacity(0.1)
-                Text("Hello, Second View!")
-                    .font(.largeTitle)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color(red: 0.3216, green: 0.3247, blue: 0.3538))
-            }
             VStack{
                 
                 List(self.audios,id: \.self){i in

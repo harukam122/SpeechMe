@@ -27,6 +27,7 @@ struct ResultView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 30)
                     .foregroundColor(Color.white)
+                    .frame(width: 300, height: 500)
                 Text("97")
                     .foregroundColor(Color.accentColor)
                     .font(.custom("KumbhSans-SemiBold", size: 120))
