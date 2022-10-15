@@ -29,7 +29,7 @@ struct ResultView: View {
                     .foregroundColor(Color.white)
                 Text("97")
                     .foregroundColor(Color.accentColor)
-                    .font(.largeTitle.bold())
+                    .font(.custom("KumbhSans-SemiBold", size: 120))
 //                List(results, id: \.trackId) { item in
 //                    VStack(alignment: .leading) {
 //                        Text(item.trackName)
