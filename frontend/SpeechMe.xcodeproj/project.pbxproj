@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D30D96A128FA4EE500D1BC05 /* SpeechMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96A028FA4EE500D1BC05 /* SpeechMeApp.swift */; };
+		D30D96A328FA4EE500D1BC05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96A228FA4EE500D1BC05 /* ContentView.swift */; };
+		D30D96A528FA4EE700D1BC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30D96A428FA4EE700D1BC05 /* Assets.xcassets */; };
+		D30D96A828FA4EE700D1BC05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30D96A728FA4EE700D1BC05 /* Preview Assets.xcassets */; };
+		D30D96B228FA4EE700D1BC05 /* SpeechMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96B128FA4EE700D1BC05 /* SpeechMeTests.swift */; };
+		D30D96BC28FA4EE700D1BC05 /* SpeechMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96BB28FA4EE700D1BC05 /* SpeechMeUITests.swift */; };
+		D30D96BE28FA4EE700D1BC05 /* SpeechMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96BD28FA4EE700D1BC05 /* SpeechMeUITestsLaunchTests.swift */; };
+		D30D96CF28FA98B800D1BC05 /* KumbhSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30D96CE28FA98B700D1BC05 /* KumbhSans-Regular.ttf */; };
+		D30D96D128FA99D800D1BC05 /* KumbhSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30D96D028FA99D800D1BC05 /* KumbhSans-SemiBold.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D30D96AE28FA4EE700D1BC05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D30D969528FA4EE400D1BC05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D30D969C28FA4EE400D1BC05;
+			remoteInfo = SpeechMe;
+		};
+		D30D96B828FA4EE700D1BC05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D30D969528FA4EE400D1BC05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D30D969C28FA4EE400D1BC05;
+			remoteInfo = SpeechMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D30D969D28FA4EE400D1BC05 /* SpeechMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30D96A028FA4EE500D1BC05 /* SpeechMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMeApp.swift; sourceTree = "<group>"; };
+		D30D96A228FA4EE500D1BC05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D30D96A428FA4EE700D1BC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D30D96A728FA4EE700D1BC05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D30D96AD28FA4EE700D1BC05 /* SpeechMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30D96B128FA4EE700D1BC05 /* SpeechMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMeTests.swift; sourceTree = "<group>"; };
+		D30D96B728FA4EE700D1BC05 /* SpeechMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30D96BB28FA4EE700D1BC05 /* SpeechMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMeUITests.swift; sourceTree = "<group>"; };
+		D30D96BD28FA4EE700D1BC05 /* SpeechMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D30D96CD28FA983A00D1BC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D30D96CE28FA98B700D1BC05 /* KumbhSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KumbhSans-Regular.ttf"; sourceTree = "<group>"; };
+		D30D96D028FA99D800D1BC05 /* KumbhSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KumbhSans-SemiBold.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D30D969A28FA4EE400D1BC05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30D96AA28FA4EE700D1BC05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30D96B428FA4EE700D1BC05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D30D969428FA4EE400D1BC05 = {
+			isa = PBXGroup;
+			children = (
+				D30D96CC28FA95CA00D1BC05 /* CustomFonts */,
+				D30D969F28FA4EE400D1BC05 /* SpeechMe */,
+				D30D96B028FA4EE700D1BC05 /* SpeechMeTests */,
+				D30D96BA28FA4EE700D1BC05 /* SpeechMeUITests */,
+				D30D969E28FA4EE400D1BC05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D30D969E28FA4EE400D1BC05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D30D969D28FA4EE400D1BC05 /* SpeechMe.app */,
+				D30D96AD28FA4EE700D1BC05 /* SpeechMeTests.xctest */,
+				D30D96B728FA4EE700D1BC05 /* SpeechMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D30D969F28FA4EE400D1BC05 /* SpeechMe */ = {
+			isa = PBXGroup;
+			children = (
+				D30D96CD28FA983A00D1BC05 /* Info.plist */,
+				D30D96A028FA4EE500D1BC05 /* SpeechMeApp.swift */,
+				D30D96A228FA4EE500D1BC05 /* ContentView.swift */,
+				D30D96A428FA4EE700D1BC05 /* Assets.xcassets */,
+				D30D96A628FA4EE700D1BC05 /* Preview Content */,
+			);
+			path = SpeechMe;
+			sourceTree = "<group>";
+		};
+		D30D96A628FA4EE700D1BC05 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D30D96A728FA4EE700D1BC05 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D30D96B028FA4EE700D1BC05 /* SpeechMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D30D96B128FA4EE700D1BC05 /* SpeechMeTests.swift */,
+			);
+			path = SpeechMeTests;
+			sourceTree = "<group>";
+		};
+		D30D96BA28FA4EE700D1BC05 /* SpeechMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D30D96BB28FA4EE700D1BC05 /* SpeechMeUITests.swift */,
+				D30D96BD28FA4EE700D1BC05 /* SpeechMeUITestsLaunchTests.swift */,
+			);
+			path = SpeechMeUITests;
+			sourceTree = "<group>";
+		};
+		D30D96CC28FA95CA00D1BC05 /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				D30D96CE28FA98B700D1BC05 /* KumbhSans-Regular.ttf */,
+				D30D96D028FA99D800D1BC05 /* KumbhSans-SemiBold.ttf */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D30D969C28FA4EE400D1BC05 /* SpeechMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D30D96C128FA4EE700D1BC05 /* Build configuration list for PBXNativeTarget "SpeechMe" */;
+			buildPhases = (
+				D30D969928FA4EE400D1BC05 /* Sources */,
+				D30D969A28FA4EE400D1BC05 /* Frameworks */,
+				D30D969B28FA4EE400D1BC05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeechMe;
+			productName = SpeechMe;
+			productReference = D30D969D28FA4EE400D1BC05 /* SpeechMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D30D96AC28FA4EE700D1BC05 /* SpeechMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D30D96C428FA4EE700D1BC05 /* Build configuration list for PBXNativeTarget "SpeechMeTests" */;
+			buildPhases = (
+				D30D96A928FA4EE700D1BC05 /* Sources */,
+				D30D96AA28FA4EE700D1BC05 /* Frameworks */,
+				D30D96AB28FA4EE700D1BC05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D30D96AF28FA4EE700D1BC05 /* PBXTargetDependency */,
+			);
+			name = SpeechMeTests;
+			productName = SpeechMeTests;
+			productReference = D30D96AD28FA4EE700D1BC05 /* SpeechMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D30D96B628FA4EE700D1BC05 /* SpeechMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D30D96C728FA4EE700D1BC05 /* Build configuration list for PBXNativeTarget "SpeechMeUITests" */;
+			buildPhases = (
+				D30D96B328FA4EE700D1BC05 /* Sources */,
+				D30D96B428FA4EE700D1BC05 /* Frameworks */,
+				D30D96B528FA4EE700D1BC05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D30D96B928FA4EE700D1BC05 /* PBXTargetDependency */,
+			);
+			name = SpeechMeUITests;
+			productName = SpeechMeUITests;
+			productReference = D30D96B728FA4EE700D1BC05 /* SpeechMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D30D969528FA4EE400D1BC05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D30D969C28FA4EE400D1BC05 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D30D96AC28FA4EE700D1BC05 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D30D969C28FA4EE400D1BC05;
+					};
+					D30D96B628FA4EE700D1BC05 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D30D969C28FA4EE400D1BC05;
+					};
+				};
+			};
+			buildConfigurationList = D30D969828FA4EE400D1BC05 /* Build configuration list for PBXProject "SpeechMe" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D30D969428FA4EE400D1BC05;
+			productRefGroup = D30D969E28FA4EE400D1BC05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D30D969C28FA4EE400D1BC05 /* SpeechMe */,
+				D30D96AC28FA4EE700D1BC05 /* SpeechMeTests */,
+				D30D96B628FA4EE700D1BC05 /* SpeechMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D30D969B28FA4EE400D1BC05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D30D96CF28FA98B800D1BC05 /* KumbhSans-Regular.ttf in Resources */,
+				D30D96A828FA4EE700D1BC05 /* Preview Assets.xcassets in Resources */,
+				D30D96D128FA99D800D1BC05 /* KumbhSans-SemiBold.ttf in Resources */,
+				D30D96A528FA4EE700D1BC05 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30D96AB28FA4EE700D1BC05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30D96B528FA4EE700D1BC05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D30D969928FA4EE400D1BC05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D30D96A328FA4EE500D1BC05 /* ContentView.swift in Sources */,
+				D30D96A128FA4EE500D1BC05 /* SpeechMeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30D96A928FA4EE700D1BC05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D30D96B228FA4EE700D1BC05 /* SpeechMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30D96B328FA4EE700D1BC05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D30D96BE28FA4EE700D1BC05 /* SpeechMeUITestsLaunchTests.swift in Sources */,
+				D30D96BC28FA4EE700D1BC05 /* SpeechMeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D30D96AF28FA4EE700D1BC05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D30D969C28FA4EE400D1BC05 /* SpeechMe */;
+			targetProxy = D30D96AE28FA4EE700D1BC05 /* PBXContainerItemProxy */;
+		};
+		D30D96B928FA4EE700D1BC05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D30D969C28FA4EE400D1BC05 /* SpeechMe */;
+			targetProxy = D30D96B828FA4EE700D1BC05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D30D96BF28FA4EE700D1BC05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D30D96C028FA4EE700D1BC05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D30D96C228FA4EE700D1BC05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpeechMe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeechMe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hackharvard.SpeechMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D30D96C328FA4EE700D1BC05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpeechMe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeechMe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hackharvard.SpeechMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D30D96C528FA4EE700D1BC05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hackharvard.SpeechMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeechMe.app/SpeechMe";
+			};
+			name = Debug;
+		};
+		D30D96C628FA4EE700D1BC05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hackharvard.SpeechMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeechMe.app/SpeechMe";
+			};
+			name = Release;
+		};
+		D30D96C828FA4EE700D1BC05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hackharvard.SpeechMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpeechMe;
+			};
+			name = Debug;
+		};
+		D30D96C928FA4EE700D1BC05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hackharvard.SpeechMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpeechMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D30D969828FA4EE400D1BC05 /* Build configuration list for PBXProject "SpeechMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D30D96BF28FA4EE700D1BC05 /* Debug */,
+				D30D96C028FA4EE700D1BC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D30D96C128FA4EE700D1BC05 /* Build configuration list for PBXNativeTarget "SpeechMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D30D96C228FA4EE700D1BC05 /* Debug */,
+				D30D96C328FA4EE700D1BC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D30D96C428FA4EE700D1BC05 /* Build configuration list for PBXNativeTarget "SpeechMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D30D96C528FA4EE700D1BC05 /* Debug */,
+				D30D96C628FA4EE700D1BC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D30D96C728FA4EE700D1BC05 /* Build configuration list for PBXNativeTarget "SpeechMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D30D96C828FA4EE700D1BC05 /* Debug */,
+				D30D96C928FA4EE700D1BC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D30D969528FA4EE400D1BC05 /* Project object */;
+}
