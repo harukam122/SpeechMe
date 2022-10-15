@@ -1,12 +1,16 @@
 import argparse
 import os
+from tracemalloc import start
 import utils
-from find_similarities import find_similarities
-import json
-import re
-import string
+from find_similarities import scorecalc
 
 def GetScore(start_word, filepath, api_key):
+
+    if api_key is None:
+        api_key = os.getenv("AAI_API_KEY")
+        if api_key is None:
+            raise RuntimeError("AAI_API_KEY environment variable not set. Try setting it now, or passing in your "
+                               "API key as a command line argument with `--api_key`.")
 
     # Create header with authorization along with content-type
     header = {
@@ -14,7 +18,7 @@ def GetScore(start_word, filepath, api_key):
         'content-type': 'application/json'
     }
 
-    # Uploading to AssemblyAI
+    # Upload the audio file to AssemblyAI
     upload_url = utils.upload_file(filepath, header)
 
     # Request a transcription
@@ -30,10 +34,6 @@ def GetScore(start_word, filepath, api_key):
     paragraphs = utils.get_paragraphs(polling_endpoint, header)
     string = paragraphs[0]['text']
     text = string[:-1]
-
-    return find_similarities(start_word, text)
-
-def GetFirstWord():
-    #TODO
-
-    return
+    score = scorecalc(start_word, text)
+    
+    return score
