@@ -1,13 +1,11 @@
-# speech-recognition-in-5-minutes-with-python
+# SpeechMe!
 
-Repo for hosting tutorial code associated with the [AssemblyAI and Python in 5 Minutes](https://www.assemblyai.com/blog/assemblyai-and-python-in-5-minutes/) blog by [AssemblyAI](https://www.assemblyai.com/)
+An app for those who want to check their pronounciation of English words...
 
 
-## Requirements
-
-```console
-$ pip install requests
-```
+## Inputs
+ blah blha
+ 
 
 ## Usage:
 
