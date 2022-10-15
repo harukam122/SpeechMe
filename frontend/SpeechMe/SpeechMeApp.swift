@@ -13,7 +13,7 @@ import SwiftUI
 struct SpeechMeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InputView()
         }
     }
 }

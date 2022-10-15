@@ -16,6 +16,8 @@
 		D30D96BE28FA4EE700D1BC05 /* SpeechMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96BD28FA4EE700D1BC05 /* SpeechMeUITestsLaunchTests.swift */; };
 		D30D96CF28FA98B800D1BC05 /* KumbhSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30D96CE28FA98B700D1BC05 /* KumbhSans-Regular.ttf */; };
 		D30D96D128FA99D800D1BC05 /* KumbhSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30D96D028FA99D800D1BC05 /* KumbhSans-SemiBold.ttf */; };
+		D30D96D328FAFACD00D1BC05 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96D228FAFACD00D1BC05 /* InputView.swift */; };
+		D30D96D528FAFBAF00D1BC05 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D96D428FAFBAF00D1BC05 /* RecordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D30D96CD28FA983A00D1BC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D30D96CE28FA98B700D1BC05 /* KumbhSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KumbhSans-Regular.ttf"; sourceTree = "<group>"; };
 		D30D96D028FA99D800D1BC05 /* KumbhSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KumbhSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		D30D96D228FAFACD00D1BC05 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		D30D96D428FAFBAF00D1BC05 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				D30D96CD28FA983A00D1BC05 /* Info.plist */,
 				D30D96A028FA4EE500D1BC05 /* SpeechMeApp.swift */,
 				D30D96A228FA4EE500D1BC05 /* ContentView.swift */,
+				D30D96D228FAFACD00D1BC05 /* InputView.swift */,
+				D30D96D428FAFBAF00D1BC05 /* RecordView.swift */,
 				D30D96A428FA4EE700D1BC05 /* Assets.xcassets */,
 				D30D96A628FA4EE700D1BC05 /* Preview Content */,
 			);
@@ -275,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30D96D328FAFACD00D1BC05 /* InputView.swift in Sources */,
+				D30D96D528FAFBAF00D1BC05 /* RecordView.swift in Sources */,
 				D30D96A328FA4EE500D1BC05 /* ContentView.swift in Sources */,
 				D30D96A128FA4EE500D1BC05 /* SpeechMeApp.swift in Sources */,
 			);

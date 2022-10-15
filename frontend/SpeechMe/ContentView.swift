@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WelcomeView: View {
     var body: some View {
         NavigationView {
             // view code
@@ -39,26 +39,8 @@ struct ContentView: View {
     }
 }
 
-struct InputView: View {
-    var body: some View {
-        // view code
-        VStack(alignment: .center) {
-            Spacer()
-            
-            Image("speechme").resizable()
-                .scaledToFit()
-                .frame(width: 120)
-                
-            Text("Next Page")
-                .padding()
-                .font(Font.custom("KumbhSans-SemiBold", size: 40))
-                .foregroundColor(Color.accentColor)
-        }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
+struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WelcomeView()
     }
 }
