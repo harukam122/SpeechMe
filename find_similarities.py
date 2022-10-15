@@ -19,8 +19,9 @@ def find_similarities(start_word, end_word) -> float:
         temp = 1
 
       #Sets the value to minimum of 1+right, 1+ below, and either 1 or 0 + below and to the right
-      similarity_array[i][j] = min(similarity_array[i+1][j] + 1, similarity_array[i][j+1] + 1, similarity_array[i+1][j+1] + temp)
-      
-      return 1-(similarity_array[0][0]/max(len(start_word), len(end_word)))
+      similarity_array[i][j] = min(similarity_array[i+1][j] + 1, \
+      similarity_array[i][j+1] + 1, \
+      similarity_array[i+1][j+1] + temp)
 
-print(find_similarities("rʌf", "rʌf"))
+  return 1-(similarity_array[0][0]/max(len(start_word), len(end_word)))
+print(find_similarities("hel", "je"))
