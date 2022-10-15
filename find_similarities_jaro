@@ -1,6 +1,6 @@
 from math import floor
 
-def jaro_distance(start_word, end_word):
+def find_similarities(start_word, end_word):
     if (start_word == end_word):
         return 1
  
