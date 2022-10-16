@@ -23,7 +23,12 @@ struct InputView: View {
                         .foregroundColor(Color.black.opacity(0.7))
                         .padding(10)
                     HStack {
-                        TextField("Word Here", text: $text)
+                        TextField("", text: $text)
+                            .placeholder(when: text.isEmpty) {
+                                Text("type a word...").foregroundColor(Color.white)
+                                    .opacity(0.5)
+                                
+                        }
                     }.modifier(customViewModifier(roundedCornes: 20, backgroundColor: Color(red: 0.0868, green: 0.1528, blue: 0.87), textColor: .white))
                 }.padding(50)
                 
@@ -69,4 +74,21 @@ struct InputView_Previews: PreviewProvider {
     static var previews: some View {
         InputView()
     }
+}
+
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
+    }
+}
+
+class InputViewModel {
+    var input: String?
 }

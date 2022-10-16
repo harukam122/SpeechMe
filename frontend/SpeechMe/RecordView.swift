@@ -24,15 +24,20 @@ struct Record : View {
     var body: some View{
         VStack{
             VStack{
-                Text("Word").font(Font.custom("KumbhSans-Regular", size: 20))
-                Text("Input")
+                Image("speechme").resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40).padding(.trailing, 300.0)
+//                Text("Word")
+//                    .font(Font.custom("KumbhSans-Regular", size: 20))
+                Text("Dog")
                     .font(Font.custom("KumbhSans-SemiBold", size: 50))
-                    .padding(70)
+                    .foregroundColor(Color.accentColor)
+                    .padding(80)
                     .background(.white)
                     .foregroundColor(Color(.gray))
                     .overlay(
                             RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color(.gray), lineWidth: 2)
+                                .stroke(Color.accentColor, lineWidth: 4.5)
                             )
                 Button(action: {
                     do{
@@ -61,21 +66,28 @@ struct Record : View {
                         print(error.localizedDescription)
                     }
                 }) {
-                    ZStack{
-                        VStack{
-                            Text("Record Audio").font(.custom("KumbhSans-SemiBold", size: 40))
-                        }.padding(.bottom, 120)
-                
-                        Circle()
-                            .fill(Color.red)
-                            .frame(width: 70, height: 70).padding(.top, 90)
-                        
-                        if self.record{
-                            
+                    VStack {
+                        ZStack{
+                            VStack{
+                                Text("Say your word")
+                                    .font(.custom("KumbhSans-SemiBold", size: 30))
+                                    .foregroundColor(Color.gray)
+                            }.padding(.bottom, 120)
+                    
                             Circle()
-                                .stroke(Color.gray, lineWidth: 6)
-                                .frame(width: 85, height: 85).padding(.top, 90)
+                                .fill(Color.red)
+                                .frame(width: 70, height: 70).padding(.top, 90)
+                            
+                            if self.record{
+                                
+                                Circle()
+                                    .stroke(Color.gray, lineWidth: 6)
+                                    .frame(width: 85, height: 85).padding(.top, 90)
+                            }
                         }
+                        Text("Record")
+                            .padding(.top)
+                            .foregroundColor(Color.gray)
                     }
                 }
                 .padding(.vertical, 70)
@@ -89,15 +101,14 @@ struct Record : View {
                     guard let fileName = viewModel.fileName else {
                         return
                     }
-                    try? sendAudio(fileURL: fileURL, fileName: fileName)
+                    uploadAudio(paramName: "audio", fileURL: fileURL, fileName: fileName)
                 }
                 .font(Font.custom("KumbhSans-SemiBold", size: 20))
                 .padding()
                 .background(Color("AccentColor"))
                 .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 25))
-            }.padding(60)
-
+            }
         }
         .alert(isPresented: self.$alert, content: {
             Alert(title: Text("Error"), message: Text("Enable Access"))
@@ -137,18 +148,6 @@ struct Record : View {
             print(error.localizedDescription)
         }
     }
-}
-
-func sendAudio(fileURL: URL, fileName: String) throws {
-//    let fileLocation = Bundle.main.path(forResource: fileName, ofType: "m4a")
-//    guard let fileLocation = fileLocation else {
-//        return //TODO: handle
-//    }
-//    let fileURL = URL(fileURLWithPath: fileLocation)
-    let fileData = try Data(contentsOf: fileURL, options: .dataReadingMapped)
-    let base64String = fileData.base64EncodedString()
-//    makePostReq(audio: base64String)
-    uploadAudio(paramName: "audio", fileURL: fileURL, fileName: fileName)
 }
 
 struct RecordView: View {
