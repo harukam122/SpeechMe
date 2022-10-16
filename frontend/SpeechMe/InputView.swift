@@ -13,7 +13,6 @@ struct InputView: View {
     @State var text = ""
     
     var body: some View {
-        NavigationView {
             VStack {
                 VStack(alignment: .leading) {
                     Image("speechme").resizable()
@@ -24,12 +23,12 @@ struct InputView: View {
                         .foregroundColor(Color.black.opacity(0.7))
                         .padding(10)
                     HStack {
-                        TextField("...", text: $text)
+                        TextField("Word Here", text: $text)
                     }.modifier(customViewModifier(roundedCornes: 20, backgroundColor: Color(red: 0.0868, green: 0.1528, blue: 0.87), textColor: .white))
                 }.padding(50)
                 
                 NavigationLink(destination: RecordView()) {
-                    Text("submit")
+                    Text("Submit")
                     .frame(minWidth: 0, maxWidth: 60)
                     .padding(10)
                     .foregroundColor(Color(red: 0.0868, green: 0.1528, blue: 0.87))
@@ -42,7 +41,7 @@ struct InputView: View {
             }
                 .padding(-15)
           }
-        }
+    
     }
 }
 

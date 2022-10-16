@@ -22,11 +22,11 @@ struct ResultView: View {
     var body: some View {
         
         // view code
-        NavigationView {
+       
             ZStack (alignment: .leading) {
                 RoundedRectangle(cornerRadius: 30)
                     .foregroundColor(Color.white)
-                    .frame(width: 300, height: 500).padding(50)
+                    .frame(width: 300, height: 450).padding(50).padding(.bottom, 40)
                 Text("Score").foregroundColor(Color.accentColor)
                     .font(.custom("KumbhSans-SemiBold", size: 30)).frame(maxWidth: .infinity, alignment: .center).padding(.bottom, 200)
                 Text("97")
@@ -35,18 +35,21 @@ struct ResultView: View {
                 Text("out of 100")
                     .foregroundColor(Color.black).opacity(0.7)
                     .font(.custom("KumbhSans-Regular", size: 20)).frame(maxWidth: .infinity, alignment: .center).padding(.top, 200)
-                NavigationLink("Try Again!") {
-                    InputView()
+                ZStack{
+                    NavigationLink("Practice") {
+                        InputView()
+                    }
+                    .font(Font.custom("KumbhSans-SemiBold", size: 20))
+                    .padding()
+                    .background(.gray)
+                    .foregroundColor(Color(.white))
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                    .frame(maxWidth: 200, maxHeight: 700).padding(120).padding(.top, 600)
                 }
-                .font(Font.custom("KumbhSans-SemiBold", size: 20))
-                .padding()
-                .background(.gray)
-                .foregroundColor(Color(.white))
-                .clipShape(RoundedRectangle(cornerRadius: 25))
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.accentColor)
-        }
+        
     }
     
 //    func loadResult() async {

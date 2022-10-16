@@ -9,15 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
             // view code
+        NavigationView{
             VStack(alignment: .center) {
                 Spacer()
-                
                 Image("speechme").resizable()
                     .scaledToFit()
                     .frame(width: 120)
-                    
+                
                 Text("Welcome")
                     .padding()
                     .font(Font.custom("KumbhSans-SemiBold", size: 40))

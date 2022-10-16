@@ -22,71 +22,50 @@ struct Record : View {
     let viewModel = RecordViewModel()
     
     var body: some View{
-        NavigationView{
+        VStack{
             VStack{
-                
-                List(self.audios,id: \.self){i in
-                    
-                    // printing only file name...
-                    
-                    Text(i.relativeString)
-                }
-                
-                
+                Text("Word").font(Font.custom("KumbhSans-Regular", size: 20))
+                Text("Input")
+                    .font(Font.custom("KumbhSans-SemiBold", size: 50))
+                    .padding(70)
+                    .background(.white)
+                    .foregroundColor(Color(.gray))
+                    .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color(.gray), lineWidth: 2)
+                            )
                 Button(action: {
-
-                    // Now going to record audio...
-                    
-                    // Intialization...
-                    
-                    // Were going to store audio in document directory...
-                    
                     do{
-                        
                         if self.record {
-                            
-                            // Already Started Recording means stopping and saving...
-                            
                             self.recorder.stop()
                             self.record.toggle()
                             // updating data for every rcd...
                             self.getAudios()
                             return
                         }
-                        
                         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                        
-                        // same file name...
-                        // updating based on audio count...
                         let fileURL = url.appendingPathComponent("myRcd\(self.audios.count + 1).m4a")
                         viewModel.fileName = "myRcd\(self.audios.count + 1).m4a"
                         viewModel.fileURL = fileURL
-                        
                         let settings = [
-                        
                             AVFormatIDKey : Int(kAudioFormatMPEG4AAC),
                             AVSampleRateKey : 12000,
                             AVNumberOfChannelsKey : 1,
                             AVEncoderAudioQualityKey : AVAudioQuality.high.rawValue
-                        
                         ]
-                        
                         self.recorder = try AVAudioRecorder(url: fileURL, settings: settings)
                         self.recorder.record()
                         self.record.toggle()
                     }
                     catch{
-                        
                         print(error.localizedDescription)
                     }
-                    
-                    
                 }) {
-                    
                     ZStack{
                         VStack{
                             Text("Record Audio").font(.custom("KumbhSans-SemiBold", size: 40))
                         }.padding(.bottom, 120)
+                
                         Circle()
                             .fill(Color.red)
                             .frame(width: 70, height: 70).padding(.top, 90)
@@ -117,61 +96,35 @@ struct Record : View {
                 .background(Color("AccentColor"))
                 .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 25))
-                
             }.padding(60)
-        
+
         }
         .alert(isPresented: self.$alert, content: {
-            
             Alert(title: Text("Error"), message: Text("Enable Access"))
         })
         .onAppear {
-            
             do{
-                
-                // Intializing...
-                
                 self.session = AVAudioSession.sharedInstance()
                 try self.session.setCategory(.playAndRecord)
-                
-                // requesting permission
-                // for this we require microphone usage description in info.plist...
                 self.session.requestRecordPermission { (status) in
-                    
                     if !status{
-                        
-                        // error msg...
                         self.alert.toggle()
                     }
                     else{
-                        
-                        // if permission granted means fetching all data...
-                        
                         self.getAudios()
                     }
                 }
-                
-                
             }
             catch{
-                
                 print(error.localizedDescription)
             }
         }
     }
     
     func getAudios(){
-        
         do{
-            
             let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            
-            // fetch all data from document directory...
-            
             let result = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .producesRelativePathURLs)
-            
-            // updated means remove all old data..
-            
             self.audios.removeAll()
             
             for i in result{
