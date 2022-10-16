@@ -81,22 +81,33 @@ struct Record : View {
                 }) {
                     
                     ZStack{
-                        
+                        VStack{
+                            Text("Record Audio").font(.custom("KumbhSans-SemiBold", size: 40))
+                        }.padding(.bottom, 120)
                         Circle()
                             .fill(Color.red)
-                            .frame(width: 70, height: 70)
+                            .frame(width: 70, height: 70).padding(.top, 90)
                         
                         if self.record{
                             
                             Circle()
-                                .stroke(Color.white, lineWidth: 6)
-                                .frame(width: 85, height: 85)
+                                .stroke(Color.gray, lineWidth: 6)
+                                .frame(width: 85, height: 85).padding(.top, 90)
                         }
                     }
                 }
-                .padding(.vertical, 25)
-            }
-            .navigationBarTitle("Record Audio")
+                .padding(.vertical, 70)
+                NavigationLink("Get Results") {
+                    ResultView()
+                }
+                .font(Font.custom("KumbhSans-SemiBold", size: 20))
+                .padding()
+                .background(Color("AccentColor"))
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                
+            }.padding(60)
+        
         }
         .alert(isPresented: self.$alert, content: {
             

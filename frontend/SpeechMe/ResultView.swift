@@ -43,9 +43,16 @@ struct ResultView: View {
                 //                        Text(item.collectionName)
                 //                    }
                 //                }
-               
+                NavigationLink("Try Again!") {
+                    InputView()
+                }
+                .font(Font.custom("KumbhSans-SemiBold", size: 20))
+                .padding()
+                .background(.gray)
+                .foregroundColor(Color(.white))
+                .clipShape(RoundedRectangle(cornerRadius: 25))
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.accentColor)
             .task {
                 await loadResult()
