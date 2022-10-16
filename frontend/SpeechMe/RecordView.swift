@@ -185,7 +185,7 @@ func makePostReq(audio: String) {
     request.setValue("", forHTTPHeaderField: "")
     let body: [String: AnyHashable] = [
         "audio": audio,
-        "word": "Hello"
+        "text": "Hello"
     ]
     request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
 
