@@ -1,3 +1,4 @@
+
 from flask import Flask, jsonify, request
 from transcribe import GetScore
 import os
@@ -11,16 +12,16 @@ app = Flask(__name__)
 
 @app.route('/audio', methods=['POST'])
 def audio():
-    print(request)
-    audio_file = request.json["audio"]
-    file_name = "recording.wav"
-    wav_file = open("temp.wav", "wb")
-    decode_string = base64.b64decode(audio_file)
-    wav_file.write(decode_string)
 
-    score = GetScore(request.json["text"], audio_file, 'b8c4374e49ae4dc2b75626b5b9052d0f')
+    request.files["audio"].save("recording.wav")
+    
+    # wav_file = open("temp.wav", "wb")
+    # decode_string = base64.b64decode(audio_file)
+    # wav_file.write(decode_string)
 
-    os.remove(file_name)
+    score = int(100*GetScore(request.form["text"], "recording.wav", 'b8c4374e49ae4dc2b75626b5b9052d0f'))
+
+    os.system('rm recording.wav')
 
     data = {"score" : score}
     return jsonify(data)
