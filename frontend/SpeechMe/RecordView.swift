@@ -161,35 +161,49 @@ struct Record : View {
             print(error.localizedDescription)
         }
     }
-    
-    func sendAudio(fileName: String) throws {
-        let fileLocation = Bundle.main.path(forResource: fileName, ofType: "m4a")
-        guard let fileLocation = fileLocation else {
-            return //TODO: handle
-        }
-        let fileURL = URL(fileURLWithPath: fileLocation)
-        let fileData = try Data(contentsOf: fileURL, options: .dataReadingMapped)
-        let base64String = fileData.base64EncodedString()
-        print(base64String)
-    }
-    
 }
 
-//func apiCall() {
-//    guard let url = URL(string: "") else {
-//        return
-//    }
-//
-//    var request = URLRequest(url: url)
-//    // method, body, headers
-//    request.httpMethod = "POST"
-//    request.setValue("", forHTTPHeaderField: "")
-//    let body: [String: AnyHashable] = [
-//    ]
-//    request.httpBody = nil
-//
-//    // make the request
-//}
+func sendAudio(fileName: String) throws {
+    let fileLocation = Bundle.main.path(forResource: fileName, ofType: "m4a")
+    guard let fileLocation = fileLocation else {
+        return //TODO: handle
+    }
+    let fileURL = URL(fileURLWithPath: fileLocation)
+    let fileData = try Data(contentsOf: fileURL, options: .dataReadingMapped)
+    let base64String = fileData.base64EncodedString()
+    makePostReq(audio: base64String)
+}
+
+func makePostReq(audio: String) {
+    guard let url = URL(string: "") else {
+        return
+    }
+
+    var request = URLRequest(url: url)
+    // method, body, headers
+    request.httpMethod = "POST"
+    request.setValue("", forHTTPHeaderField: "")
+    let body: [String: AnyHashable] = [
+        "audio": audio,
+        "word": "Hello"
+    ]
+    request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+
+    // make the request
+    let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        guard let data = data, error == nil else {
+            return
+        }
+        
+        do {
+            let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            print("SUCESS: \(response)")
+        } catch {
+            print(error)
+        }
+    }
+    task.resume()
+}
 
 struct RecordView: View {
     var body: some View {
