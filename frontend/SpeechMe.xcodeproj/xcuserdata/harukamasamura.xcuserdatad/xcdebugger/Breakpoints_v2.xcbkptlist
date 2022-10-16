@@ -30,10 +30,10 @@
             filePath = "SpeechMe/ResultView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "loadResult()"
-            landmarkType = "7">
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "ResultView"
+            landmarkType = "14">
             <Locations>
                <Location
                   uuid = "B4DB0039-63AB-42D7-930B-9FF1A049DF41 - eb7d39026eb14107"

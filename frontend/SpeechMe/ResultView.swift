@@ -19,7 +19,6 @@ struct Result: Codable {
 
 struct ResultView: View {
     @State private var results = [Result]()
-    
     var body: some View {
         
         // view code
@@ -36,13 +35,6 @@ struct ResultView: View {
                 Text("out of 100")
                     .foregroundColor(Color.black).opacity(0.7)
                     .font(.custom("KumbhSans-Regular", size: 20)).frame(maxWidth: .infinity, alignment: .center).padding(.top, 200)
-                //                List(results, id: \.trackId) { item in
-                //                    VStack(alignment: .leading) {
-                //                        Text(item.trackName)
-                //                            .font(.headline)
-                //                        Text(item.collectionName)
-                //                    }
-                //                }
                 NavigationLink("Try Again!") {
                     InputView()
                 }
@@ -54,30 +46,27 @@ struct ResultView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.accentColor)
-            .task {
-                await loadResult()
-            }
         }
     }
     
-    func loadResult() async {
-        guard let url = URL(string: "https://www.randomnumberapi.com/api/v1.0/random?min=1&max=100&count=1") else {
-            print("Invalid URL")
-            return
-        }
-        
-        // retrieve data (toss meta data)
-        do {
-            let(data, _) = try await URLSession.shared.data(from: url)
-            
-            if let decodedResponse = try? JSONDecoder().decode(Array<Int>.self, from: data) {
-                let result = decodedResponse
-                print(result)
-            }
-        } catch {
-            print("Invalid Data")
-        }
-    }
+//    func loadResult() async {
+//        guard let url = URL(string: "https://www.randomnumberapi.com/api/v1.0/random?min=1&max=100&count=1") else {
+//            print("Invalid URL")
+//            return
+//        }
+//
+//        // retrieve data (toss meta data)
+//        do {
+//            let(data, _) = try await URLSession.shared.data(from: url)
+//
+//            if let decodedResponse = try? JSONDecoder().decode(Array<Int>.self, from: data) {
+//                let result = decodedResponse
+//                print(result)
+//            }
+//        } catch {
+//            print("Invalid Data")
+//        }
+//    }
 }
 
 struct ResultView_Previews: PreviewProvider {

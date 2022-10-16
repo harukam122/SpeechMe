@@ -28,9 +28,7 @@ struct InputView: View {
                     }.modifier(customViewModifier(roundedCornes: 20, backgroundColor: Color(red: 0.0868, green: 0.1528, blue: 0.87), textColor: .white))
                 }.padding(50)
                 
-                NavigationLink(destination: RecordView().onAppear{
-                        self.sendWord()
-                    }) {
+                NavigationLink(destination: RecordView()) {
                     Text("submit")
                     .frame(minWidth: 0, maxWidth: 60)
                     .padding(10)
@@ -45,10 +43,6 @@ struct InputView: View {
                 .padding(-15)
           }
         }
-    }
-    
-    func sendWord() {
-        print("Hi!")
     }
 }
 
