@@ -12,7 +12,7 @@ An accessible, easy-to-use iOS app providing an alternative to expensive speech 
 
 ## Inspiration ✨
 
-Nearly 10% of all children experience speech-related disorders. But speech therapy can cost more than $31,000 each year. What if there was a simple, accessible, and affordable alternative to practicing speech/pronunciation?
+Nearly 10% of all children experience speech-related disorders. But a private speech therapist can cost more than $31,000 each year. What if there was a simple, accessible, and affordable alternative to practicing speech/pronunciation?
 
 ## What it does 💡
 
